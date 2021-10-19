@@ -1,10 +1,10 @@
 //Form events
+let firstNameInput = document.getElementsByName("first_name")[0].value;
+let lastNameInput = document.getElementsByName("last_name")[0].value;
 const registrationForm = document.querySelector("#registration_form");
 registrationForm.addEventListener("submit", function (e) {
     e.preventDefault();
-    window.location.href =
-        "checkout.html?firstname=" +
-        document.getElementsByName("first_name")[0].value + "&lastname=" + document.getElementsByName("last_name")[0].value;
+    window.location.href = `checkout.html?firstname=${firstNameInput}&lastname=${lastNameInput}`;
 });
 
 // //Keyboard events(keydown)
