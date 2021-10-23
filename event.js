@@ -1,4 +1,4 @@
-// let navbarItem1=document.getElementsByClassName("naw__item")[0].innerText;
+/*// let navbarItem1=document.getElementsByClassName("naw__item")[0].innerText;
 // console.log(navbarItem1);
 //let navbarItem1= document.getElementsByClassName("nav_links")[0].firstElementChild.innerText;
 let navbarItem1= document.getElementsByClassName("nav__links")[0].children[0];
@@ -51,3 +51,44 @@ window.addEventListener("DOMContentLoaded",function(e){
 navbarItem1.addEventListener('click' , ()=>{
     alert("Paths clicked by eventlistener")
 });
+
+navbarItem1.onclick=() =>{
+    alert("Paths clicked by old version");
+}
+
+navbarItem2.addEventListener("mousover",()=>{
+    navbarItem2.innerText="Over Me!";
+    navbarItem2.style.color="blue";
+});
+
+navbarItem2.addEventListener("mouseout", () =>{
+    navbarItem2.innerText="Instuctors";
+    navbarItem2.style.color="#444444";
+    navbarItem2.style.fontSize ="1.7rem"
+
+});
+
+//////////////  BUBBLING    //////////////
+
+/////////🔥🔥🔥🔥🔥rgb rndom color(rgb(255,255,255) onclick of Community Li (CODE CHALLENGE)  
+
+const randomNumber=() => Math.round(Math.random()*255);
+const randomColor =() =>`rgb(${randomNumber()},${randomNumber()},${randomNumber()})`;
+console.log(randomColor());
+navbarItem3.addEventListener('click',(e)=>{
+    e.stopPropagation();
+    navbarItem3.style.backgroundColor =randomColor();
+});
+
+navbarItem3.parentElement.addEventListener("click",()=>{
+    navbarItem3.parentElement.style.backgroundColor = randomColor();
+
+} );
+
+navbarItem3.parentElement.parentElement.addEventListener("click", ()=>{
+    navbarItem3.parentElement.parentElement.style.backgroundColor= randomColor();
+});
+
+*/
+
+
