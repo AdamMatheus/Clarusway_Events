@@ -49,9 +49,7 @@ navbarItem1.addEventListener("click", ()=>{
     alert("Paths clicked by eventlistener");
 });
 
-navbarItem1.onclick = () =>{
-    alert("Paths clicked by old version");
-}
+
 navbarItem2.addEventListener("mouseover", () => {
     navbarItem2.innerText = "Over Me!";
     navbarItem2.style.color = "green";
@@ -85,3 +83,34 @@ navbarItem3.parentElement.addEventListener("click", ()=>{
 navbarItem3.parentElement.parentElement.addEventListener("click", ()=>{
     navbarItem3.parentElement.parentElement.style.backgroundColor = randomColor();
 });
+
+
+
+/////////////////////////////////////////////////////////
+let lastNameInput = document.getElementsByName("last_name")[0];
+console.log(lastNameInput);
+
+let span = document.querySelector("#charCount");
+console.log(span);
+
+
+
+
+const showRemainChar = () => {
+    span.innerText = lastNameInput.value.length + "/40";
+}
+
+lastNameInput.addEventListener("keyup", showRemainChar);
+
+let date = document.getElementsByName("birthday")[0];
+    date.addEventListener("change", ()=>{
+    alert(date.value);
+});
+
+let selectBox = document.querySelector("#paths");
+const getSelectedItem = () =>{
+    let selectedName = selectBox.options[selectBox.selectedIndex].innerText;
+    alert(selectedName);
+}
+selectBox.onchange = getSelectedItem;
+    
